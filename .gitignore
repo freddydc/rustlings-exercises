@@ -1,0 +1,6 @@
+# dependencies
+target
+Cargo.lock
+
+# editor
+.vscode
