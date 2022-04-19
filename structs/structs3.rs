@@ -16,11 +16,11 @@ impl Package {
         if weight_in_grams <= 0 {
             panic!("Fail creating weightless package")
         } else {
-            return Package {
+            Package {
                 sender_country,
                 recipient_country,
                 weight_in_grams,
-            };
+            }
         }
     }
 
