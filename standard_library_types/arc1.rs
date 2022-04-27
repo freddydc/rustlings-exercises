@@ -31,12 +31,7 @@ fn main() {
         let child_numbers = shared_numbers.clone();
 
         joinhandles.push(thread::spawn(move || {
-            let mut i = offset;
-            let mut sum = 0;
-            while i < child_numbers.len() {
-                sum += child_numbers[i];
-                i += 8;
-            }
+            let sum: u32 = child_numbers.iter().filter(|&n| n % 8 == offset).sum();
             println!("Sum of offset {} is {}", offset, sum);
         }));
     }
